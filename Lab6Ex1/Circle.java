@@ -1,10 +1,12 @@
 package Lab6Ex1;
 
 public class Circle {
-    public double radius;
+    private double radius = 2.0;
 
     public Circle(double r) {
         radius = r;
+        System.out.println(radius);
+        System.out.println(this.radius);
     }
 
     public double compArea() {
