@@ -1,2 +1,8 @@
+.idea/
 .DS_Store
+
+out/
 Week2/
+
+*.iml
+*.class
