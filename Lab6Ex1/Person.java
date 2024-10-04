@@ -3,7 +3,7 @@ package Lab6Ex1;
 public class Person {
     // Attributes
     private String name;
-    private int age;
+    private static int age;
     private String country;
 
     // Constructor
