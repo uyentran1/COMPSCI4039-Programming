@@ -7,8 +7,6 @@ public class Ellipse {
     public Ellipse(double a, double b) {
         this.a = a;
         this.b = b;
-        System.out.println(a);
-        System.out.println(this.a);
     }
     
     public Ellipse(double a) {
@@ -16,6 +14,7 @@ public class Ellipse {
         this.b = a;
     }
 
+    @Override
     public String toString() {
         return "a: " + a + ", b: " + b;
     }

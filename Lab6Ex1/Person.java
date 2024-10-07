@@ -2,9 +2,9 @@ package Lab6Ex1;
 
 public class Person {
     // Attributes
-    private String name;
-    private static int age;
-    private String country;
+    protected String name;
+    protected static int age;
+    protected String country;
 
     // Constructor
     public Person(String s, int a, String c) {
@@ -42,6 +42,7 @@ public class Person {
         System.out.println("Hi, I'm " + name + ", I'm " + age + " years old, and I come from " + country + ".");
     }
 
+    @Override
     public String toString() {
         return name + " " + age + " " + country;
     }
