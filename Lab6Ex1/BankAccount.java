@@ -38,6 +38,7 @@ public class BankAccount {
         receivingAccount.depositFund(amt);
     }
 
+    @Override
     public String toString() {
         return "Name: " + person.getName() + ", " + "Account: " + accountNumber + ", Balance: " + balance;
     }
