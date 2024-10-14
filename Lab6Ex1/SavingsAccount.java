@@ -1,24 +1,22 @@
 package Lab6Ex1;
 
 public class SavingsAccount extends BankAccount {
-    static Person person1 = new Person("Naomi", 21, "USA");
     private double interestRate;
 
-    public SavingsAccount(double interestRate) {
-        super(person1);
+    public SavingsAccount(Person p, double interestRate) {
+        super(p); // Pass the Person object
         this.interestRate = interestRate;
     }
 
     @Override
     public void withdrawFund(double amt) {
         if (amt <= this.getBalance()) {
-            double newBalance = this.getBalance() - amt;
-            this.setBalance(newBalance);
+            super.withdrawFund(amt); // Leverage the base class method
         }
     }
 
     public void addInterest() {
-        double newBalance = this.getBalance() * (1 + interestRate/100.0);
+        double newBalance = this.getBalance() * (1 + interestRate / 100.0);
         this.setBalance(newBalance);
     }
 }

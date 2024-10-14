@@ -1,7 +1,11 @@
 .idea/
 .DS_Store
 
+# Folders
 out/
+Assignments/
+Lab Exercises/
+LECTURES/
 Materials/
 
 *.iml
