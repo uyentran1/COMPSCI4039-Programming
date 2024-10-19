@@ -1,13 +1,18 @@
 package Lab6Ex1;
 
-public class PersonEquals {
+public class PersonEquals 
+{
     private String name;
     private int age;
 
-    public PersonEquals(String n, int a) 
+    public PersonEquals(String name, int age) 
     {
-        name = n;
-        age = a;
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getAge()

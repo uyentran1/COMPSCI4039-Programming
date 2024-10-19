@@ -1,7 +1,7 @@
 package Lab4Ex1;
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Lab4Ex7 {
     public static void main(String[] args) {
@@ -66,32 +66,21 @@ public class Lab4Ex7 {
 
         Random rand = new Random();
         int randomNumber = rand.nextInt(3); // 3 is excluded
-
-        if (randomNumber == 0) {
-            computerChoice = "Rock";
-        }
-        else if (randomNumber == 1) {
-            computerChoice = "Paper";
-        }
-        else {
-            computerChoice = "Scissors";
-        }
+        computerChoice = switch (randomNumber) {
+            case 0 -> "Rock";
+            case 1 -> "Paper";
+            default -> "Scissors";
+        };
 
         return computerChoice;
     }
 
     public static String getUserChoice() {
-        Scanner keyboard = new Scanner(System.in);
-
         String userChoice;
-        // do {
-        System.out.println("Enter your choice: Rock, Paper, or Scissors.");
-        userChoice = keyboard.nextLine();
-        // }
-        // while (!(userChoice == "Rock" || userChoice == "Paper" || userChoice == "Scissors"));
-
-        
-        // keyboard.close();
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.println("Enter your choice: Rock, Paper, or Scissors.");
+            userChoice = keyboard.nextLine();
+        }
         return userChoice;
     }
 
