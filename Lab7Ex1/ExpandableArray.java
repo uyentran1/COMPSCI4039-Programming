@@ -56,9 +56,7 @@ public class ExpandableArray
     {
         ExpandableArray arr = new ExpandableArray();
         for (int i = 0; i < 10; i++)
-        {
             arr.add(i);
-        }
 
         System.out.println(arr);
         System.out.println(arr.getLength());

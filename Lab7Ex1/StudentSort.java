@@ -14,14 +14,12 @@ public class StudentSort
         for (Student student : students)
             System.out.println(student);
 
-
         sort(students);
 
         System.out.println("\nSorted");
 
         for (Student student : students)
             System.out.println(student);
-
     }    
 
     public static void sort(Student[] s)
